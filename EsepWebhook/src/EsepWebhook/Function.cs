@@ -22,7 +22,7 @@ public class Function
 
         string payload = $"{{'text':'Issue Created: {json.issue.html_url}'}}";
 
-        var cliet = new HttpClient();
+        var client = new HttpClient();
         var webRequest = new HttpRequestMessage(HttpMethod.Post, Environment.GetEnvrionmentVariable("SLACK_URL"))
         {
             Content = new StringContent(payload, Encoding.UTF8, "application/json")
